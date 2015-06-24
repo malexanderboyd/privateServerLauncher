@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class Launcher
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -26,6 +26,10 @@ Partial Class Form1
         Me.wotlkLauncher = New System.Windows.Forms.Button()
         Me.bcLauncher = New System.Windows.Forms.Button()
         Me.exitButton = New System.Windows.Forms.Button()
+        Me.settings = New System.Windows.Forms.Button()
+        Me.bcPathLabel = New System.Windows.Forms.Label()
+        Me.wotlkPathLabel = New System.Windows.Forms.Label()
+        Me.cataPathLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'cataLauncher
@@ -64,28 +68,70 @@ Partial Class Form1
         Me.exitButton.Text = "X"
         Me.exitButton.UseVisualStyleBackColor = True
         '
-        'Form1
+        'settings
+        '
+        Me.settings.Location = New System.Drawing.Point(13, 13)
+        Me.settings.Name = "settings"
+        Me.settings.Size = New System.Drawing.Size(75, 23)
+        Me.settings.TabIndex = 4
+        Me.settings.Text = "Settings"
+        Me.settings.UseVisualStyleBackColor = True
+        '
+        'bcPathLabel
+        '
+        Me.bcPathLabel.AutoSize = True
+        Me.bcPathLabel.Location = New System.Drawing.Point(79, 338)
+        Me.bcPathLabel.Name = "bcPathLabel"
+        Me.bcPathLabel.Size = New System.Drawing.Size(0, 13)
+        Me.bcPathLabel.TabIndex = 6
+        '
+        'wotlkPathLabel
+        '
+        Me.wotlkPathLabel.AutoSize = True
+        Me.wotlkPathLabel.Location = New System.Drawing.Point(348, 340)
+        Me.wotlkPathLabel.Name = "wotlkPathLabel"
+        Me.wotlkPathLabel.Size = New System.Drawing.Size(0, 13)
+        Me.wotlkPathLabel.TabIndex = 7
+        '
+        'cataPathLabel
+        '
+        Me.cataPathLabel.AutoSize = True
+        Me.cataPathLabel.Location = New System.Drawing.Point(598, 338)
+        Me.cataPathLabel.Name = "cataPathLabel"
+        Me.cataPathLabel.Size = New System.Drawing.Size(0, 13)
+        Me.cataPathLabel.TabIndex = 8
+        '
+        'Launcher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.privateServerLauncher.My.Resources.Resources.tumblr_mo1j1iVamH1qmc8m1o1_500
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(717, 391)
+        Me.Controls.Add(Me.cataPathLabel)
+        Me.Controls.Add(Me.wotlkPathLabel)
+        Me.Controls.Add(Me.bcPathLabel)
+        Me.Controls.Add(Me.settings)
         Me.Controls.Add(Me.exitButton)
         Me.Controls.Add(Me.bcLauncher)
         Me.Controls.Add(Me.wotlkLauncher)
         Me.Controls.Add(Me.cataLauncher)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Form1"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.Name = "Launcher"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents cataLauncher As System.Windows.Forms.Button
     Friend WithEvents wotlkLauncher As System.Windows.Forms.Button
     Friend WithEvents bcLauncher As System.Windows.Forms.Button
     Friend WithEvents exitButton As System.Windows.Forms.Button
+    Friend WithEvents settings As System.Windows.Forms.Button
+    Friend WithEvents bcPathLabel As System.Windows.Forms.Label
+    Friend WithEvents wotlkPathLabel As System.Windows.Forms.Label
+    Friend WithEvents cataPathLabel As System.Windows.Forms.Label
 
 End Class
