@@ -63,17 +63,16 @@
         Dim realmName As String = Nothing
         ' realmPath = InputBox("Enter your Realmlist Path.", "Realmlist Path", , , )
         realmName = InputBox("Enter your new Realmlist.", "Realmlist Edit", , , )
-
-        If Not String.IsNullOrEmpty(realmName) Then
-            FileOpen(1, "F:\Programs\World of Warcraft 2.4.3\realmlist.wtf", OpenMode.Output)
-            PrintLine(1, "set realmlist " + realmName)
-            FileClose(1)
-            If (bcPath.Length > 0) Then
-                System.Diagnostics.Process.Start(bcPath + "\wow.exe")
-            Else
-
-
+        If (bcPath.Length > 0) Then
+            If Not String.IsNullOrEmpty(realmName) Then
+                FileOpen(1, bcPath + "\realmlist.wtf", OpenMode.Output)
+                PrintLine(1, "set realmlist " + realmName)
+                FileClose(1)
             End If
+            System.Diagnostics.Process.Start(bcPath + "\wow.exe")
+        Else
+
+
         End If
 
 
@@ -84,17 +83,15 @@
         Dim realmName As String = Nothing
         ' realmPath = InputBox("Enter your Realmlist Path.", "Realmlist Path", , , )
         realmName = InputBox("Enter your new Realmlist.", "Realmlist Edit", , , )
-
-        If Not String.IsNullOrEmpty(realmName) Then
-            FileOpen(1, "F:\Programs\World of Warcraft 3.3.5\Data\enUS\realmlist.wtf", OpenMode.Output)
-            PrintLine(1, "set realmlist " + realmName)
-            FileClose(1)
-            If (wotlkPath.Length > 0) Then
-                System.Diagnostics.Process.Start(wotlkPath + "\wow.exe")
-            Else
-
-
+        If (wotlkPath.Length > 0) Then
+            If Not String.IsNullOrEmpty(realmName) Then
+                FileOpen(1, wotlkPath + "\Data\enUS\realmlist.wtf", OpenMode.Output)
+                PrintLine(1, "set realmlist " + realmName)
+                FileClose(1)
             End If
+            System.Diagnostics.Process.Start(wotlkPath + "\wow.exe")
+        Else
+
 
         End If
 
@@ -109,17 +106,16 @@
         Dim realmName As String = Nothing
         ' realmPath = InputBox("Enter your Realmlist Path.", "Realmlist Path", , , )
         realmName = InputBox("Enter your new Realmlist.", "Realmlist Edit", , , )
-
-        If Not String.IsNullOrEmpty(realmName) Then
-            FileOpen(1, "F:\Programs\World ofWarcraft 4.3.4\Data\enGB\realmlist.wtf", OpenMode.Output) 'Hard coded in because I'm too lazy to find path always for personal use.'
-            PrintLine(1, "set realmlist " + realmName)
-            FileClose(1)
-            If (cataPath.Length > 0) Then
-                System.Diagnostics.Process.Start(cataPath + "\WoW-x64.exe")
-            Else
-
-
+        If (cataPath.Length > 0) Then
+            If Not String.IsNullOrEmpty(realmName) Then
+                FileOpen(1, cataPath + "\Data\enGB\realmlist.wtf", OpenMode.Output) 'Hard coded in because I'm too lazy to find path always for personal use.'
+                PrintLine(1, "set realmlist " + realmName)
+                FileClose(1)
             End If
+            System.Diagnostics.Process.Start(cataPath + "\WoW-x64.exe")
+        Else
+
+
         End If
 
     End Sub
