@@ -3,7 +3,7 @@
     Dim bcPath As String
     Dim wotlkPath As String
     Dim cataPath As String
-
+    Dim vanillaPath As String
     Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         ' Testing Purposes for right now...
         ' My.Settings.Reset()
@@ -18,9 +18,15 @@
         Dim pathChecker1 As Boolean
         Dim pathChecker2 As Boolean
         Dim pathChecker3 As Boolean
+        Dim pathChecker4 As Boolean
         pathChecker1 = False
         pathChecker2 = False
         pathChecker3 = False
+        pathChecker4 = False
+        If My.Settings.vanillaPath <> "" Then
+            pathChecker4 = True
+            vanillaPath = My.Settings.vanillaPath
+        End If
         If My.Settings.bcPath <> "" Then
             pathChecker1 = True
             bcPath = My.Settings.bcPath
@@ -51,7 +57,11 @@
         Else
             cataPathLabel.Text = ""
         End If
-
+        If pathChecker4 = False Then
+            vanillaPathText.Text = "Path not set!"
+        Else
+            vanillaPathText.Text = ""
+        End If
 
 
 
@@ -128,5 +138,23 @@
         Dim Form2 As New Settings
         Form2.Show()
         Me.Refresh()
+    End Sub
+
+    Private Sub vanillaLauncher_Click(sender As System.Object, e As System.EventArgs) Handles vanillaLauncher.Click
+        ' Dim realmPath As String = Nothing
+        Dim realmName As String = Nothing
+        ' realmPath = InputBox("Enter your Realmlist Path.", "Realmlist Path", , , )
+        realmName = InputBox("Enter your new Realmlist.", "Realmlist Edit", , , )
+        If (vanillaPath.Length > 0) Then
+            If Not String.IsNullOrEmpty(realmName) Then
+                FileOpen(1, vanillaPath + "\realmlist.wtf", OpenMode.Output)
+                PrintLine(1, "set realmlist " + realmName)
+                FileClose(1)
+            End If
+            System.Diagnostics.Process.Start(vanillaPath + "\WoW.exe")
+        Else
+
+
+        End If
     End Sub
 End Class

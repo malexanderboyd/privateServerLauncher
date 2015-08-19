@@ -10,6 +10,9 @@
         If (My.Settings.cataPath.Length > 0) Then
             cataPathText.Text = My.Settings.cataPath
         End If
+        If (My.Settings.vanillaPath.Length > 0) Then
+            vanillaPathText.Text = My.Settings.vanillaPath
+        End If
     End Sub
 
     Private Sub bcPathBrowse_Click(sender As System.Object, e As System.EventArgs) Handles bcPathBrowse.Click
@@ -34,9 +37,17 @@
         My.Settings.bcPath = bcPathText.Text
         My.Settings.wotlkPath = wotlkPathText.Text
         My.Settings.cataPath = cataPathText.Text
+        My.Settings.vanillaPath = vanillaPathText.Text
         My.Settings.Save()
         Launcher.settupPaths()
         Me.Close()
     End Sub
+
+    Private Sub vanillaPathButton_Click(sender As System.Object, e As System.EventArgs) Handles vanillaPathBrowse.Click
+        If (vanillaPathBrowseDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            vanillaPathText.Text = vanillaPathBrowseDialog.SelectedPath
+        End If
+    End Sub
+
 
 End Class

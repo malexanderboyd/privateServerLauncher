@@ -35,11 +35,15 @@ Partial Class Settings
         Me.wotlkFolderBrowserDialog = New System.Windows.Forms.FolderBrowserDialog()
         Me.cataFolderBrowserDialog = New System.Windows.Forms.FolderBrowserDialog()
         Me.savePathsButton = New System.Windows.Forms.Button()
+        Me.vanillaPath = New System.Windows.Forms.Label()
+        Me.vanillaPathText = New System.Windows.Forms.TextBox()
+        Me.vanillaPathBrowse = New System.Windows.Forms.Button()
+        Me.vanillaPathBrowseDialog = New System.Windows.Forms.FolderBrowserDialog()
         Me.SuspendLayout()
         '
         'bcPathBrowse
         '
-        Me.bcPathBrowse.Location = New System.Drawing.Point(551, 51)
+        Me.bcPathBrowse.Location = New System.Drawing.Point(536, 72)
         Me.bcPathBrowse.Name = "bcPathBrowse"
         Me.bcPathBrowse.Size = New System.Drawing.Size(25, 23)
         Me.bcPathBrowse.TabIndex = 0
@@ -48,7 +52,7 @@ Partial Class Settings
         '
         'wotlkPathBrowse
         '
-        Me.wotlkPathBrowse.Location = New System.Drawing.Point(552, 99)
+        Me.wotlkPathBrowse.Location = New System.Drawing.Point(537, 127)
         Me.wotlkPathBrowse.Name = "wotlkPathBrowse"
         Me.wotlkPathBrowse.Size = New System.Drawing.Size(24, 23)
         Me.wotlkPathBrowse.TabIndex = 1
@@ -57,7 +61,7 @@ Partial Class Settings
         '
         'cataPathBrowse
         '
-        Me.cataPathBrowse.Location = New System.Drawing.Point(552, 147)
+        Me.cataPathBrowse.Location = New System.Drawing.Point(535, 179)
         Me.cataPathBrowse.Name = "cataPathBrowse"
         Me.cataPathBrowse.Size = New System.Drawing.Size(26, 23)
         Me.cataPathBrowse.TabIndex = 2
@@ -66,7 +70,7 @@ Partial Class Settings
         '
         'bcPathText
         '
-        Me.bcPathText.Location = New System.Drawing.Point(118, 54)
+        Me.bcPathText.Location = New System.Drawing.Point(109, 75)
         Me.bcPathText.Name = "bcPathText"
         Me.bcPathText.Size = New System.Drawing.Size(396, 20)
         Me.bcPathText.TabIndex = 3
@@ -74,7 +78,7 @@ Partial Class Settings
         'bcPathLabel
         '
         Me.bcPathLabel.AutoSize = True
-        Me.bcPathLabel.Location = New System.Drawing.Point(33, 56)
+        Me.bcPathLabel.Location = New System.Drawing.Point(25, 75)
         Me.bcPathLabel.Name = "bcPathLabel"
         Me.bcPathLabel.Size = New System.Drawing.Size(46, 13)
         Me.bcPathLabel.TabIndex = 4
@@ -83,7 +87,7 @@ Partial Class Settings
         'wotlkPathLabel
         '
         Me.wotlkPathLabel.AutoSize = True
-        Me.wotlkPathLabel.Location = New System.Drawing.Point(33, 108)
+        Me.wotlkPathLabel.Location = New System.Drawing.Point(25, 127)
         Me.wotlkPathLabel.Name = "wotlkPathLabel"
         Me.wotlkPathLabel.Size = New System.Drawing.Size(74, 13)
         Me.wotlkPathLabel.TabIndex = 5
@@ -91,14 +95,14 @@ Partial Class Settings
         '
         'wotlkPathText
         '
-        Me.wotlkPathText.Location = New System.Drawing.Point(118, 101)
+        Me.wotlkPathText.Location = New System.Drawing.Point(109, 127)
         Me.wotlkPathText.Name = "wotlkPathText"
         Me.wotlkPathText.Size = New System.Drawing.Size(396, 20)
         Me.wotlkPathText.TabIndex = 6
         '
         'cataPathText
         '
-        Me.cataPathText.Location = New System.Drawing.Point(118, 150)
+        Me.cataPathText.Location = New System.Drawing.Point(109, 179)
         Me.cataPathText.Name = "cataPathText"
         Me.cataPathText.Size = New System.Drawing.Size(396, 20)
         Me.cataPathText.TabIndex = 7
@@ -106,7 +110,7 @@ Partial Class Settings
         'cataPathLabel
         '
         Me.cataPathLabel.AutoSize = True
-        Me.cataPathLabel.Location = New System.Drawing.Point(33, 157)
+        Me.cataPathLabel.Location = New System.Drawing.Point(25, 184)
         Me.cataPathLabel.Name = "cataPathLabel"
         Me.cataPathLabel.Size = New System.Drawing.Size(54, 13)
         Me.cataPathLabel.TabIndex = 8
@@ -121,11 +125,39 @@ Partial Class Settings
         Me.savePathsButton.Text = "Save"
         Me.savePathsButton.UseVisualStyleBackColor = True
         '
+        'vanillaPath
+        '
+        Me.vanillaPath.AutoSize = True
+        Me.vanillaPath.Location = New System.Drawing.Point(25, 31)
+        Me.vanillaPath.Name = "vanillaPath"
+        Me.vanillaPath.Size = New System.Drawing.Size(63, 13)
+        Me.vanillaPath.TabIndex = 10
+        Me.vanillaPath.Text = "Vanilla Path"
+        '
+        'vanillaPathText
+        '
+        Me.vanillaPathText.Location = New System.Drawing.Point(109, 31)
+        Me.vanillaPathText.Name = "vanillaPathText"
+        Me.vanillaPathText.Size = New System.Drawing.Size(396, 20)
+        Me.vanillaPathText.TabIndex = 11
+        '
+        'vanillaPathBrowse
+        '
+        Me.vanillaPathBrowse.Location = New System.Drawing.Point(535, 31)
+        Me.vanillaPathBrowse.Name = "vanillaPathBrowse"
+        Me.vanillaPathBrowse.Size = New System.Drawing.Size(25, 23)
+        Me.vanillaPathBrowse.TabIndex = 12
+        Me.vanillaPathBrowse.Text = "..."
+        Me.vanillaPathBrowse.UseVisualStyleBackColor = True
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(662, 257)
+        Me.Controls.Add(Me.vanillaPathBrowse)
+        Me.Controls.Add(Me.vanillaPathText)
+        Me.Controls.Add(Me.vanillaPath)
         Me.Controls.Add(Me.savePathsButton)
         Me.Controls.Add(Me.cataPathLabel)
         Me.Controls.Add(Me.cataPathText)
@@ -136,6 +168,7 @@ Partial Class Settings
         Me.Controls.Add(Me.cataPathBrowse)
         Me.Controls.Add(Me.wotlkPathBrowse)
         Me.Controls.Add(Me.bcPathBrowse)
+        Me.Controls.Add(Me.vanillaPathBrowse)
         Me.Name = "Settings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Settings"
@@ -155,5 +188,9 @@ Partial Class Settings
     Friend WithEvents bcFolderBrowserDialog As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents wotlkFolderBrowserDialog As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents cataFolderBrowserDialog As System.Windows.Forms.FolderBrowserDialog
+    Friend WithEvents vanillaPathBrowseDialog As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents savePathsButton As System.Windows.Forms.Button
+    Friend WithEvents vanillaPath As System.Windows.Forms.Label
+    Friend WithEvents vanillaPathText As System.Windows.Forms.TextBox
+    Friend WithEvents vanillaPathBrowse As System.Windows.Forms.Button
 End Class

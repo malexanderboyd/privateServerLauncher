@@ -30,11 +30,13 @@ Partial Class Launcher
         Me.bcPathLabel = New System.Windows.Forms.Label()
         Me.wotlkPathLabel = New System.Windows.Forms.Label()
         Me.cataPathLabel = New System.Windows.Forms.Label()
+        Me.vanillaLauncher = New System.Windows.Forms.Button()
+        Me.vanillaPathText = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'cataLauncher
         '
-        Me.cataLauncher.Location = New System.Drawing.Point(580, 356)
+        Me.cataLauncher.Location = New System.Drawing.Point(523, 356)
         Me.cataLauncher.Name = "cataLauncher"
         Me.cataLauncher.Size = New System.Drawing.Size(75, 23)
         Me.cataLauncher.TabIndex = 0
@@ -43,7 +45,7 @@ Partial Class Launcher
         '
         'wotlkLauncher
         '
-        Me.wotlkLauncher.Location = New System.Drawing.Point(299, 356)
+        Me.wotlkLauncher.Location = New System.Drawing.Point(351, 356)
         Me.wotlkLauncher.Name = "wotlkLauncher"
         Me.wotlkLauncher.Size = New System.Drawing.Size(136, 23)
         Me.wotlkLauncher.TabIndex = 1
@@ -52,7 +54,7 @@ Partial Class Launcher
         '
         'bcLauncher
         '
-        Me.bcLauncher.Location = New System.Drawing.Point(31, 354)
+        Me.bcLauncher.Location = New System.Drawing.Point(181, 356)
         Me.bcLauncher.Name = "bcLauncher"
         Me.bcLauncher.Size = New System.Drawing.Size(136, 23)
         Me.bcLauncher.TabIndex = 2
@@ -101,13 +103,31 @@ Partial Class Launcher
         Me.cataPathLabel.Size = New System.Drawing.Size(0, 13)
         Me.cataPathLabel.TabIndex = 8
         '
+        'vanillaLauncher
+        '
+        Me.vanillaLauncher.Location = New System.Drawing.Point(13, 354)
+        Me.vanillaLauncher.Name = "vanillaLauncher"
+        Me.vanillaLauncher.Size = New System.Drawing.Size(136, 23)
+        Me.vanillaLauncher.TabIndex = 9
+        Me.vanillaLauncher.Text = "Vanilla"
+        Me.vanillaLauncher.UseVisualStyleBackColor = True
+        '
+        'vanillaPathText
+        '
+        Me.vanillaPathText.AutoSize = True
+        Me.vanillaPathText.Location = New System.Drawing.Point(40, 325)
+        Me.vanillaPathText.Name = "vanillaPathText"
+        Me.vanillaPathText.Size = New System.Drawing.Size(0, 13)
+        Me.vanillaPathText.TabIndex = 10
+        '
         'Launcher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.privateServerLauncher.My.Resources.Resources.tumblr_mo1j1iVamH1qmc8m1o1_500
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(717, 391)
+        Me.Controls.Add(Me.vanillaPathText)
+        Me.Controls.Add(Me.vanillaLauncher)
         Me.Controls.Add(Me.cataPathLabel)
         Me.Controls.Add(Me.wotlkPathLabel)
         Me.Controls.Add(Me.bcPathLabel)
@@ -133,5 +153,7 @@ Partial Class Launcher
     Friend WithEvents bcPathLabel As System.Windows.Forms.Label
     Friend WithEvents wotlkPathLabel As System.Windows.Forms.Label
     Friend WithEvents cataPathLabel As System.Windows.Forms.Label
+    Friend WithEvents vanillaLauncher As System.Windows.Forms.Button
+    Friend WithEvents vanillaPathText As System.Windows.Forms.Label
 
 End Class

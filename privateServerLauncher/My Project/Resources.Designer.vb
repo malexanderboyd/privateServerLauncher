@@ -63,9 +63,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property tumblr_mo1j1iVamH1qmc8m1o1_500() As System.Drawing.Bitmap
+        Friend ReadOnly Property TransparentLion() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("tumblr_mo1j1iVamH1qmc8m1o1_500", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("TransparentLion", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
