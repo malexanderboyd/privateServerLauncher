@@ -32,11 +32,12 @@ Partial Class Launcher
         Me.cataPathLabel = New System.Windows.Forms.Label()
         Me.vanillaLauncher = New System.Windows.Forms.Button()
         Me.vanillaPathText = New System.Windows.Forms.Label()
+        Me.legionButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cataLauncher
         '
-        Me.cataLauncher.Location = New System.Drawing.Point(523, 356)
+        Me.cataLauncher.Location = New System.Drawing.Point(439, 356)
         Me.cataLauncher.Name = "cataLauncher"
         Me.cataLauncher.Size = New System.Drawing.Size(75, 23)
         Me.cataLauncher.TabIndex = 0
@@ -45,7 +46,7 @@ Partial Class Launcher
         '
         'wotlkLauncher
         '
-        Me.wotlkLauncher.Location = New System.Drawing.Point(351, 356)
+        Me.wotlkLauncher.Location = New System.Drawing.Point(297, 356)
         Me.wotlkLauncher.Name = "wotlkLauncher"
         Me.wotlkLauncher.Size = New System.Drawing.Size(136, 23)
         Me.wotlkLauncher.TabIndex = 1
@@ -54,7 +55,7 @@ Partial Class Launcher
         '
         'bcLauncher
         '
-        Me.bcLauncher.Location = New System.Drawing.Point(181, 356)
+        Me.bcLauncher.Location = New System.Drawing.Point(155, 356)
         Me.bcLauncher.Name = "bcLauncher"
         Me.bcLauncher.Size = New System.Drawing.Size(136, 23)
         Me.bcLauncher.TabIndex = 2
@@ -120,12 +121,22 @@ Partial Class Launcher
         Me.vanillaPathText.Size = New System.Drawing.Size(0, 13)
         Me.vanillaPathText.TabIndex = 10
         '
+        'legionButton
+        '
+        Me.legionButton.Location = New System.Drawing.Point(523, 356)
+        Me.legionButton.Name = "legionButton"
+        Me.legionButton.Size = New System.Drawing.Size(75, 23)
+        Me.legionButton.TabIndex = 11
+        Me.legionButton.Text = "Legion"
+        Me.legionButton.UseVisualStyleBackColor = True
+        '
         'Launcher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(717, 391)
+        Me.Controls.Add(Me.legionButton)
         Me.Controls.Add(Me.vanillaPathText)
         Me.Controls.Add(Me.vanillaLauncher)
         Me.Controls.Add(Me.cataPathLabel)
@@ -155,5 +166,5 @@ Partial Class Launcher
     Friend WithEvents cataPathLabel As System.Windows.Forms.Label
     Friend WithEvents vanillaLauncher As System.Windows.Forms.Button
     Friend WithEvents vanillaPathText As System.Windows.Forms.Label
-
+    Friend WithEvents legionButton As Button
 End Class

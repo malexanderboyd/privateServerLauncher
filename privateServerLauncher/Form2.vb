@@ -13,6 +13,9 @@
         If (My.Settings.vanillaPath.Length > 0) Then
             vanillaPathText.Text = My.Settings.vanillaPath
         End If
+        If (My.Settings.legionPath.Length > 0) Then
+            legionPathBox.Text = My.Settings.legionPath
+        End If
     End Sub
 
     Private Sub bcPathBrowse_Click(sender As System.Object, e As System.EventArgs) Handles bcPathBrowse.Click
@@ -38,6 +41,7 @@
         My.Settings.wotlkPath = wotlkPathText.Text
         My.Settings.cataPath = cataPathText.Text
         My.Settings.vanillaPath = vanillaPathText.Text
+        My.Settings.legionPath = legionPathBox.Text
         My.Settings.Save()
         Launcher.settupPaths()
         Me.Close()
@@ -49,5 +53,21 @@
         End If
     End Sub
 
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles legionPathLabel.Click
 
+    End Sub
+
+    Private Sub cataPathText_TextChanged(sender As Object, e As EventArgs) Handles cataPathText.TextChanged
+
+    End Sub
+
+    Private Sub legionBrowseBox_Click(sender As Object, e As EventArgs) Handles legionBrowseBox.Click
+        If (legionPathBrowseDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            legionPathBox.Text = legionPathBrowseDialog.SelectedPath
+        End If
+    End Sub
+
+    Private Sub legionPathBox_TextChanged(sender As Object, e As EventArgs) Handles legionPathBox.TextChanged
+
+    End Sub
 End Class

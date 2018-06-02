@@ -39,6 +39,9 @@ Partial Class Settings
         Me.vanillaPathText = New System.Windows.Forms.TextBox()
         Me.vanillaPathBrowse = New System.Windows.Forms.Button()
         Me.vanillaPathBrowseDialog = New System.Windows.Forms.FolderBrowserDialog()
+        Me.legionPathBox = New System.Windows.Forms.TextBox()
+        Me.legionBrowseBox = New System.Windows.Forms.Button()
+        Me.legionPathLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'bcPathBrowse
@@ -118,7 +121,7 @@ Partial Class Settings
         '
         'savePathsButton
         '
-        Me.savePathsButton.Location = New System.Drawing.Point(269, 211)
+        Me.savePathsButton.Location = New System.Drawing.Point(269, 279)
         Me.savePathsButton.Name = "savePathsButton"
         Me.savePathsButton.Size = New System.Drawing.Size(75, 23)
         Me.savePathsButton.TabIndex = 9
@@ -150,12 +153,39 @@ Partial Class Settings
         Me.vanillaPathBrowse.Text = "..."
         Me.vanillaPathBrowse.UseVisualStyleBackColor = True
         '
+        'legionPathBox
+        '
+        Me.legionPathBox.Location = New System.Drawing.Point(109, 225)
+        Me.legionPathBox.Name = "legionPathBox"
+        Me.legionPathBox.Size = New System.Drawing.Size(396, 20)
+        Me.legionPathBox.TabIndex = 13
+        '
+        'legionBrowseBox
+        '
+        Me.legionBrowseBox.Location = New System.Drawing.Point(534, 225)
+        Me.legionBrowseBox.Name = "legionBrowseBox"
+        Me.legionBrowseBox.Size = New System.Drawing.Size(26, 23)
+        Me.legionBrowseBox.TabIndex = 14
+        Me.legionBrowseBox.Text = "..."
+        Me.legionBrowseBox.UseVisualStyleBackColor = True
+        '
+        'legionPathLabel
+        '
+        Me.legionPathLabel.AutoSize = True
+        Me.legionPathLabel.Location = New System.Drawing.Point(25, 230)
+        Me.legionPathLabel.Name = "legionPathLabel"
+        Me.legionPathLabel.Size = New System.Drawing.Size(64, 13)
+        Me.legionPathLabel.TabIndex = 15
+        Me.legionPathLabel.Text = "Legion Path"
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(662, 257)
-        Me.Controls.Add(Me.vanillaPathBrowse)
+        Me.ClientSize = New System.Drawing.Size(662, 314)
+        Me.Controls.Add(Me.legionPathLabel)
+        Me.Controls.Add(Me.legionBrowseBox)
+        Me.Controls.Add(Me.legionPathBox)
         Me.Controls.Add(Me.vanillaPathText)
         Me.Controls.Add(Me.vanillaPath)
         Me.Controls.Add(Me.savePathsButton)
@@ -189,8 +219,12 @@ Partial Class Settings
     Friend WithEvents wotlkFolderBrowserDialog As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents cataFolderBrowserDialog As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents vanillaPathBrowseDialog As System.Windows.Forms.FolderBrowserDialog
+    Friend WithEvents legionPathBrowseDialog As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents savePathsButton As System.Windows.Forms.Button
     Friend WithEvents vanillaPath As System.Windows.Forms.Label
     Friend WithEvents vanillaPathText As System.Windows.Forms.TextBox
     Friend WithEvents vanillaPathBrowse As System.Windows.Forms.Button
+    Friend WithEvents legionPathBox As TextBox
+    Friend WithEvents legionBrowseBox As Button
+    Friend WithEvents legionPathLabel As Label
 End Class
